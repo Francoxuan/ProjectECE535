@@ -1,14 +1,11 @@
 # ProjectECE535
 ## Motivation
-This project aims to create a smart urban traffic management system. Predict future traffic conditions by analyzing data and update them to the system in real time to provide convenience for the general public's transportation. This important information will be accessed frequently for a period of time after it is published.
+This project aims to create a smart urban traffic management system. Predict future traffic conditions by analyzing data and update them to the system to provide convenience for the general public's transportation. This important information will be accessed frequently for a period of time after it is published.
 Accessing data using traditional methods will lead to inefficient results, increase system load, and degrade user experience. Therefore, we can consider employing a range of optimization strategies, such as data categorization, multi-level caching, and multi-threaded concurrency, to address this issue.
 ## Design Goals:
-1. Real-time Capability: One of the design goals of the project is to ensure real-time processing and display of data to meet users' demands for quick 
-   data access.
-2. Concurrency: The project is dedicated to achieving multi-threaded concurrent processing to enhance system performance and response time.
-3. Security: Permission control and role management are implemented to ensure data security and privacy protection.
-4. Scalability: The design goal includes support for future scalability to accommodate the ever-growing data requirements.
-5. User-Friendliness: The system should be user-friendly to ensure effective utilization by a variety of users.
+1. Develop a smart urban traffic management platform that can predict future traffic conditions and improve urban traffic efficiency.
+2. Implement efficient data access and updating mechanisms to ensure timely and accurate information.
+3. Enhance system performance by employing a series of optimization strategies, including data categorization, multi-level caching, and multi-threaded concurrency.
 ## Deliverables: 
 1. A complete high-frequency data processing and display system, including both front-end and back-end components.
 2. Archives of source code and documentation to ensure maintainability and scalability of the project.
