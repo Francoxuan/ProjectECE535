@@ -28,6 +28,13 @@ Accessing data using traditional methods will lead to inefficient results, incre
 ## Team member’s lead roles:
 1. Xuan Zhang: setup, software, research <br />
 2. Xujing Lei: networking, writing, algorithm design
+## Project TimeLine:
+1. Phase 1 (October): Development of data analysis and forecasting modules.
+2. Phase 2 (November): Design and development of data access optimization module and user interface module.
+3. Phase 3 (December): System testing, document writing, project delivery.
+## References:
+1. The Role of Big Data Analytics for Enhancing the Internet of Things Applications in Megacities: The Case of Traffic Optimization and Control.Link:https://search.ebscohost.com/login.aspx?direct=true&AuthType=ip,sso&db=bth&jid=8WGI&site=eds-live&custid=umaah
+2. Hadi Zahmatkesh, Fadi Al-Turjman,Fog computing for sustainable smart cities in the IoT era: Caching techniques and enabling technologies - an overview,Sustainable Cities and Society,Volume 59,2020,102139,ISSN 2210-6707,https://doi.org/10.1016/j.scs.2020.102139.
 
 
 
