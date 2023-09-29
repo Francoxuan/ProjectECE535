@@ -28,6 +28,8 @@ In modern cities, traffic issues have consistently been a vexing challenge. Urba
 ## References:
 1. U-Net paper.Link:[https://search.ebscohost.com/login.aspx?direct=true&AuthType=ip,sso&db=bth&jid=8WGI&site=eds-live&custid=umaah.](https://arxiv.org/pdf/1505.04597.pdf)
 2. U-Net source code. Link:https://github.com/jakeret/tf_unet
+3. ImageNet Classification with Deep ConvolutionalNeural Networks https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf
+
 
 
 
