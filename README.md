@@ -11,8 +11,8 @@ In modern cities, traffic issues have consistently been a vexing challenge. Urba
 2. Use the test set to test the model to obtain the accuracy of the recognition results.
 3. Report document
 ## System Blocks:
-1. Convolutional neural network building module: responsible for positioning the license plate position
-2. U-Net building block: used to identify license plate numbers.
+1. U-Net building block: responsible for positioning the license plate position
+2. Convolutional neural network building module: used to identify license plate numbers.
 3. Model testing module: Evaluate the recognition accuracy of license plate numbers after using two models.
 ## Hardware/Software Requirements:
 1. Software: Python, TensorFlow, Keras
