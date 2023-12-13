@@ -13,10 +13,10 @@ def train_unet():
     path = 'unet_datasets\\'
     input_name = os.listdir(path)
     n = len(input_name)
-    print("数据集中共有%d条数据" % n)
+    print("There are %d data points in the dataset" % n)
     X_train, y_train = [], []
     for i in range(n):
-        print("进行读取第%d张图片" % i)
+        print("Reading image %d" % i)
         img = cv2.imread(path + '/%d.jpg' % i)
         label = cv2.imread(path + '/%d.jpg' % i)
         X_train.append(img)
@@ -91,11 +91,11 @@ def train_unet():
                   metrics=['accuracy'])
     model.summary()
 
-    print("开始训练u-net")
+    print("Start training u-net")
 
     model.fit(X_train, y_train, epochs=100, batch_size=15)
     model.save('model\\unet.h5')
-    print('unet.h5保存成功!!!')
+    print('unet.h5 saved successfully!!!')
 
 
 def unet_predict(unet, img_path):

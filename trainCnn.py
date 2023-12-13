@@ -2,12 +2,38 @@ import os
 
 import cv2
 import numpy as np
+from matplotlib import pyplot as plt
 from tensorflow.keras import layers, models
 
+def training_vis(hist):
+    loss = hist.history['loss']
+    # val_loss = hist.history['val_loss']
+    acc = hist.history['accuracy']  # new version => hist.history['accuracy']
+    # val_acc = hist.history['val_acc']  # => hist.history['val_accuracy']
+
+    # make a figure
+    fig = plt.figure(figsize=(8, 4))
+    # subplot loss
+    ax1 = fig.add_subplot(121)
+    ax1.plot(loss, label='train_loss')
+    # ax1.plot(val_loss, label='val_loss')
+    ax1.set_xlabel('Epochs')
+    ax1.set_ylabel('Loss')
+    ax1.set_title('Loss on Training and Validation Data')
+    ax1.legend()
+    # subplot acc
+    ax2 = fig.add_subplot(122)
+    ax2.plot(acc, label='train_acc')
+    # ax2.plot(val_acc, label='val_acc')
+    ax2.set_xlabel('Epochs')
+    ax2.set_ylabel('Accuracy')
+    ax2.set_title('Accuracy  on Training and Validation Data')
+    ax2.legend()
+    plt.tight_layout()
+    plt.show()
 
 
-
-def train_cnn():
+def train_cnn(epochs=10):
     char_dict = {"京": 0, "沪": 1, "津": 2, "渝": 3, "冀": 4, "晋": 5, "蒙": 6, "辽": 7, "吉": 8, "黑": 9, "苏": 10,
                  "浙": 11, "皖": 12, "闽": 13, "赣": 14, "鲁": 15, "豫": 16, "鄂": 17, "湘": 19, "粤": 18, "桂": 20,
                  "琼": 21, "川": 22, "贵": 23, "云": 24, "藏": 25, "陕": 26, "甘": 27, "青": 28, "宁": 29, "新": 30,
@@ -17,13 +43,13 @@ def train_cnn():
                  "W": 61, "X": 62, "Y": 63, "Z": 64}
 
 
-    path = 'cnn_datasets\\'
+    path = 'cnn_datasets/'
     pic_name = sorted(os.listdir(path))
     n = len(pic_name)
-    print("数据集中共有%d条数据" % n)
+    print("There are %d data points in the dataset" % n)
     X_train, y_train = [], []
     for i in range(n):
-        print("进行读取第%d张图片" % i)
+        print("Reading image %d" % i)
 
         img = cv2.imdecode(np.fromfile(path + pic_name[i], dtype=np.uint8), -1)
 
@@ -55,12 +81,17 @@ def train_cnn():
                   metrics=['accuracy'])
 
 
-    print("开始训练cnn")
+    # Model training
+    print(f"Start training CNN, {epochs} iterations in total")
+    hist = model.fit(X_train, y_train, epochs=epochs)
 
-    model.fit(X_train, y_train, epochs=1)
+    # Visualizing loss and accuracy during training
+    training_vis(hist)
 
-    model.save('model\\c.h5')
-    print('cnn.h5保存成功!!!')
+    # Saving the model
+    model.save('model/c.h5')
+    print('cnn.h5 saved successfully!!!')
+
 
 
 def cnn_predict(cnn, Lic_img):

@@ -50,4 +50,4 @@ def modeltest(d):
 
 if __name__ == '__main__':
     modeltest(r'test_data\\')
-    print('accuracy:0.8876')
+

@@ -14,7 +14,7 @@ def detect():
     unet = keras.models.load_model('model\\unet.h5')
     cnn = keras.models.load_model('model\\cnn.h5')
     cnn_predict(cnn, [np.zeros((80, 240, 3))])
-    print("已启动,开始识别吧！")
+    print("have started, start recognition!")
     str_image_file = 'test_data\\TEACHER.png'
     img_open = cv2.imread(str_image_file)
     h, w = img_open.shape[0], img_open.shape[1]
